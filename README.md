@@ -3,7 +3,7 @@ Table of contents
 =================
 
   * [Getting Started](#getting-started)
-  * [The Basics](#The Basics)
+  * [The Basics](#the-basics)
   * [Components & Databinding](#components-and-databinding)
     * [databinding](#)
   * [Directives](#directives)
@@ -55,12 +55,61 @@ Importing Bootstrap css to porject
 
 The Basics
 ============
+Angular app bootstrap process
+
+We pass AppModule to main.ts
+
+`platformBrowserDynamic().bootstrapModule(AppModule)`
+
+amd app.module passes all the components needed to run the app
+
+
 
 Components and Databinding
 ============
 
+Creating new Components 
+
+Add to the declaration array in app.module.ts
+
+```
+declarations: [
+  AppComponent,
+  YourNewComponent
+]
+```
+Creating Components with cli
+
+`ng generate component servers`
+or 
+`ng g c servers`
+
+Databinding is communication between ts code (Business Login) and html files
+
+Types of binding 
+
+1.String Binding = Value from ts to html
+2.Event Binding = Event (eg: Click event) from html to ts 
+3. Two-way-binding = Combination of both
+
+String Interpolation =  `{{stringName}}`
+Property Binding = `[disabled]="stringName"`
+
+Event Bindng = `(click)="methodName()"`
+
+Two-way-binding = `[(ngModel)]="varibleName"`
+
 Directives
 ============
+Instructions in the DOM
+
+structural directive has *
+
+```
+*ngIf="variableName"
+*ngFor="let server of servers"
+*ngFor="let server of servers; let i = index"
+```
 
 Services and Dependency Injection
 ============
