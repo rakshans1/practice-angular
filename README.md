@@ -103,6 +103,14 @@ Directives
 ============
 Instructions in the DOM
 
+```
+ng generate directive directive-name
+ng g d directive-name
+```
+
+Attribute Directives only change attributes in element.
+
+Structural Directive manipulate the dom
 structural directive has *
 
 ```
@@ -111,8 +119,17 @@ structural directive has *
 *ngFor="let server of servers; let i = index"
 ```
 
+`@Input() variable` To access variable from other child component.
+
+@Output() serverCreated = new EventEmitter<{variable: string}>(); To pass to parent component.
+
+`#referencename` for local html element reference.
+
+
 Services and Dependency Injection
 ============
+
+
 
 Routing
 ============
